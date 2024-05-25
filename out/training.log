@@ -1,0 +1,147 @@
+2024-05-26 18:09:47.618509 -- "dataset\meta.pkl" not found. Defaulting to vocab_size of GPT-2 to 50304 (50257 rounded up to the nearest multiple of 64 for efficiency)
+2024-05-26 18:09:47.618509 -- Training from scratch.
+-----Hyperparameters-----
+backend = nccl
+num_workers = 1
+flops_promised = 44100000000000.0
+device = cuda
+dtype = bfloat16
+compile = False
+data_dir = dataset
+out_dir = out
+max_iters = 100000
+log_interval = 1
+eval_interval = 1
+eval_only = False
+always_save_checkpoint = True
+check_hyperparams = True
+early_stopping = True
+patience = 1
+min_delta = 0.0
+gradient_accumulation_steps = 6
+mini_batch_size = 10
+batch_size = 60
+max_seq_len = 1024
+eval_iters = 1
+eval_mini_batch_size = 10
+dim = 768
+tblocks = 12
+heads = 12
+dropout = 0.0
+bias = False
+weight_decay = 0.01
+beta1 = 0.9
+beta2 = 0.95
+grad_clip_norm = 1.0
+lr_scheduler = LinearDecay with `min_lr`=6.000000e-05, `max_lr`=6.000000e-04, `warmup_iters`=2000, `decay_iters`=100000
+ddp = False
+master_process = True
+seed_offset = 0
+ddp_world_size = 1
+tokens_per_iter = 61440
+meta_path = dataset\meta.pkl
+vocab_size = 50304
+-----Hyperparameters End-----
+2024-05-26 18:09:49.016212 -- Number of parameters: 123.59M.
+2024-05-26 18:09:49.016212 -- Num decayed parameter tensors: 50, with 124,354,560 parameters.
+2024-05-26 18:09:49.016212 -- Num non-decayed parameter tensors: 25, with 19,200 parameters.
+2024-05-26 18:09:49.075816 -- -----Training session begins.-----
+2024-05-26 18:09:51.568942 -- iter 0: loss 11.0506, time 2430.62ms, mfu -100.00%, lr 3.00e-07, grad_norm 18.10(clipped to 1.0)
+2024-05-26 18:09:53.691566 -- iter 1: loss 10.9335, time 1644.18ms, mfu -100.00%, lr 6.00e-07, grad_norm 16.26(clipped to 1.0)
+2024-05-26 18:09:53.691566 -- -----Eval: (1 * 10)-----
+2024-05-26 18:09:53.839625 -- iter 1: loss(train) nan, loss(val) 10.9303, best_loss(val) 10.9303
+2024-05-26 18:09:53.839625 -- -----Eval End-----
+2024-05-26 18:09:53.839625 -- -----Saving checkpoint...-----
+2024-05-26 18:09:54.890878 -- -----Checkpoint saved to "out\best.pt"-----
+2024-05-26 18:09:57.038565 -- iter 2: loss 10.9543, time 1656.06ms, mfu -100.00%, lr 9.00e-07, grad_norm 14.21(clipped to 1.0)
+2024-05-26 18:09:57.038565 -- -----Eval: (1 * 10)-----
+2024-05-26 18:09:57.179369 -- iter 2: loss(train) nan, loss(val) 10.8340, best_loss(val) 10.8340
+2024-05-26 18:09:57.179369 -- -----Eval End-----
+2024-05-26 18:09:57.179369 -- -----Saving checkpoint...-----
+2024-05-26 18:09:58.182703 -- -----Checkpoint saved to "out\best.pt"-----
+2024-05-26 18:10:00.850139 -- iter 3: loss 10.8570, time 2175.38ms, mfu -100.00%, lr 1.20e-06, grad_norm 17.07(clipped to 1.0)
+2024-05-26 18:10:00.850139 -- -----Eval: (1 * 10)-----
+2024-05-26 18:10:00.999188 -- iter 3: loss(train) nan, loss(val) 10.7892, best_loss(val) 10.7892
+2024-05-26 18:10:00.999188 -- -----Eval End-----
+2024-05-26 18:10:00.999188 -- -----Saving checkpoint...-----
+2024-05-26 18:10:02.002265 -- -----Checkpoint saved to "out\best.pt"-----
+2024-05-26 18:10:04.644320 -- iter 4: loss 10.7525, time 2138.24ms, mfu -100.00%, lr 1.50e-06, grad_norm 17.23(clipped to 1.0)
+2024-05-26 18:10:04.644320 -- -----Eval: (1 * 10)-----
+2024-05-26 18:10:04.787854 -- iter 4: loss(train) nan, loss(val) 10.6912, best_loss(val) 10.6912
+2024-05-26 18:10:04.787854 -- -----Eval End-----
+2024-05-26 18:10:04.787854 -- -----Saving checkpoint...-----
+2024-05-26 18:10:05.790571 -- -----Checkpoint saved to "out\best.pt"-----
+2024-05-26 18:10:08.448253 -- iter 5: loss 10.7099, time 2150.00ms, mfu 17.24%, lr 1.80e-06, grad_norm 17.40(clipped to 1.0)
+2024-05-26 18:10:08.448253 -- -----Eval: (1 * 10)-----
+2024-05-26 18:10:08.592093 -- iter 5: loss(train) nan, loss(val) 10.6087, best_loss(val) 10.6087
+2024-05-26 18:10:08.592093 -- -----Eval End-----
+2024-05-26 18:10:08.592093 -- -----Saving checkpoint...-----
+2024-05-26 18:10:09.606888 -- -----Checkpoint saved to "out\best.pt"-----
+2024-05-26 18:10:12.293179 -- iter 6: loss 10.6264, time 2178.61ms, mfu 17.22%, lr 2.10e-06, grad_norm 14.14(clipped to 1.0)
+2024-05-26 18:10:12.293179 -- -----Eval: (1 * 10)-----
+2024-05-26 18:10:12.437475 -- iter 6: loss(train) nan, loss(val) 10.5099, best_loss(val) 10.5099
+2024-05-26 18:10:12.437475 -- -----Eval End-----
+2024-05-26 18:10:12.437475 -- -----Saving checkpoint...-----
+2024-05-26 18:10:13.457073 -- -----Checkpoint saved to "out\best.pt"-----
+2024-05-26 18:10:16.157517 -- iter 7: loss 10.5898, time 2192.75ms, mfu 17.18%, lr 2.40e-06, grad_norm 20.60(clipped to 1.0)
+2024-05-26 18:10:16.157517 -- -----Eval: (1 * 10)-----
+2024-05-26 18:10:16.316159 -- iter 7: loss(train) nan, loss(val) 10.4355, best_loss(val) 10.4355
+2024-05-26 18:10:16.316159 -- -----Eval End-----
+2024-05-26 18:10:16.316159 -- -----Saving checkpoint...-----
+2024-05-26 18:10:17.321404 -- -----Checkpoint saved to "out\best.pt"-----
+2024-05-26 18:10:20.008675 -- iter 8: loss 10.4496, time 2193.33ms, mfu 17.16%, lr 2.70e-06, grad_norm 11.74(clipped to 1.0)
+2024-05-26 18:10:20.008675 -- -----Eval: (1 * 10)-----
+2024-05-26 18:10:20.157719 -- iter 8: loss(train) nan, loss(val) 10.3507, best_loss(val) 10.3507
+2024-05-26 18:10:20.157719 -- -----Eval End-----
+2024-05-26 18:10:20.157719 -- -----Saving checkpoint...-----
+2024-05-26 18:10:21.156579 -- -----Checkpoint saved to "out\best.pt"-----
+2024-05-26 18:10:23.833772 -- iter 9: loss 10.3944, time 2169.50ms, mfu 17.15%, lr 3.00e-06, grad_norm 12.32(clipped to 1.0)
+2024-05-26 18:10:23.833772 -- -----Eval: (1 * 10)-----
+2024-05-26 18:10:23.973765 -- iter 9: loss(train) nan, loss(val) 10.3662, best_loss(val) 10.3507
+2024-05-26 18:10:23.973765 -- -----Eval End-----
+2024-05-26 18:10:23.973765 -- -----Saving checkpoint...-----
+2024-05-26 18:10:24.956257 -- -----Checkpoint saved to "out\latest.pt"-----
+2024-05-26 18:10:27.622063 -- iter 10: loss 10.3206, time 2173.75ms, mfu 17.14%, lr 3.30e-06, grad_norm 10.07(clipped to 1.0)
+2024-05-26 18:10:27.622063 -- -----Eval: (1 * 10)-----
+2024-05-26 18:10:27.772132 -- iter 10: loss(train) nan, loss(val) 10.1750, best_loss(val) 10.1750
+2024-05-26 18:10:27.772132 -- -----Eval End-----
+2024-05-26 18:10:27.772132 -- -----Saving checkpoint...-----
+2024-05-26 18:10:28.811326 -- -----Checkpoint saved to "out\best.pt"-----
+2024-05-26 18:10:31.533273 -- iter 11: loss 10.2962, time 2200.66ms, mfu 17.11%, lr 3.60e-06, grad_norm 8.54(clipped to 1.0)
+2024-05-26 18:10:31.533273 -- -----Eval: (1 * 10)-----
+2024-05-26 18:10:31.688031 -- iter 11: loss(train) nan, loss(val) 10.4091, best_loss(val) 10.1750
+2024-05-26 18:10:31.688031 -- -----Eval End-----
+2024-05-26 18:10:31.688031 -- -----Saving checkpoint...-----
+2024-05-26 18:10:32.622897 -- -----Checkpoint saved to "out\latest.pt"-----
+2024-05-26 18:10:35.327453 -- iter 12: loss 10.1858, time 2191.39ms, mfu 17.09%, lr 3.90e-06, grad_norm 10.69(clipped to 1.0)
+2024-05-26 18:10:35.327453 -- -----Eval: (1 * 10)-----
+2024-05-26 18:10:35.468779 -- iter 12: loss(train) nan, loss(val) 10.1155, best_loss(val) 10.1155
+2024-05-26 18:10:35.468779 -- -----Eval End-----
+2024-05-26 18:10:35.468779 -- -----Saving checkpoint...-----
+2024-05-26 18:10:36.473706 -- -----Checkpoint saved to "out\best.pt"-----
+2024-05-26 18:10:39.197766 -- iter 13: loss 10.1182, time 2170.48ms, mfu 17.09%, lr 4.20e-06, grad_norm 8.73(clipped to 1.0)
+2024-05-26 18:10:39.197766 -- -----Eval: (1 * 10)-----
+2024-05-26 18:10:39.337777 -- iter 13: loss(train) nan, loss(val) 9.9587, best_loss(val) 9.9587
+2024-05-26 18:10:39.337777 -- -----Eval End-----
+2024-05-26 18:10:39.337777 -- -----Saving checkpoint...-----
+2024-05-26 18:10:40.341055 -- -----Checkpoint saved to "out\best.pt"-----
+2024-05-26 18:10:43.013444 -- iter 14: loss 9.8268, time 2162.71ms, mfu 17.09%, lr 4.50e-06, grad_norm 7.85(clipped to 1.0)
+2024-05-26 18:10:43.013444 -- -----Eval: (1 * 10)-----
+2024-05-26 18:10:43.147917 -- iter 14: loss(train) nan, loss(val) 9.7657, best_loss(val) 9.7657
+2024-05-26 18:10:43.147917 -- -----Eval End-----
+2024-05-26 18:10:43.147917 -- -----Saving checkpoint...-----
+2024-05-26 18:10:44.153826 -- -----Checkpoint saved to "out\best.pt"-----
+2024-05-26 18:10:46.833008 -- iter 15: loss 9.7802, time 2169.49ms, mfu 17.09%, lr 4.80e-06, grad_norm 9.66(clipped to 1.0)
+2024-05-26 18:10:46.833008 -- -----Eval: (1 * 10)-----
+2024-05-26 18:10:46.975411 -- iter 15: loss(train) nan, loss(val) 9.9532, best_loss(val) 9.7657
+2024-05-26 18:10:46.975411 -- -----Eval End-----
+2024-05-26 18:10:46.975411 -- -----Saving checkpoint...-----
+2024-05-26 18:10:47.927455 -- -----Checkpoint saved to "out\latest.pt"-----
+2024-05-26 18:10:50.591090 -- iter 16: loss 9.7572, time 2178.19ms, mfu 17.08%, lr 5.10e-06, grad_norm 7.30(clipped to 1.0)
+2024-05-26 18:10:50.607034 -- -----Eval: (1 * 10)-----
+2024-05-26 18:10:50.744685 -- iter 16: loss(train) nan, loss(val) 9.9245, best_loss(val) 9.7657
+2024-05-26 18:10:50.744685 -- -----Eval End-----
+2024-05-26 18:10:50.744685 -- -----Saving checkpoint...-----
+2024-05-26 18:10:51.724455 -- -----Checkpoint saved to "out\latest.pt"-----
+2024-05-26 18:10:51.724455 -- -----Training ended with `patience` exceeded max(1).-----
+2024-05-26 18:10:51.724455 -- -----`iter_num`=16, `best_val_loss`=9.7657-----

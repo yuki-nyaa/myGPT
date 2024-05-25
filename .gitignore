@@ -1,0 +1,6 @@
+*.tar
+*.bin
+__pycache__
+.python-version
+*.pt
+*.arrow
